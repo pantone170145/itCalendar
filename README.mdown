@@ -1,4 +1,9 @@
 itCalendar
 ============
 
+itCalendarは、IT勉強会カレンダー閲覧用のiOSアプリケーションです。
+
+URL:
+http://itcalendar.herokuapp.com/
+
 --TapkuLibraryを使用しています。詳細はlib/README.mdownを参照してください。
