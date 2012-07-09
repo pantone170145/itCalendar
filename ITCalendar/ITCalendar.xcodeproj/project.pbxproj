@@ -1,0 +1,800 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A031657159260020000A8EE /* NSDate+locale.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A031656159260020000A8EE /* NSDate+locale.m */; };
+		1A0568C4158DD8C80027CB83 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A0568C3158DD8C80027CB83 /* libxml2.dylib */; };
+		1A0568E3158DDC870027CB83 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0568CB158DDC870027CB83 /* NSObject+SBJson.m */; };
+		1A0568E4158DDC870027CB83 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0568CE158DDC870027CB83 /* SBJsonParser.m */; };
+		1A0568E5158DDC870027CB83 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0568D0158DDC870027CB83 /* SBJsonStreamParser.m */; };
+		1A0568E6158DDC870027CB83 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0568D2158DDC870027CB83 /* SBJsonStreamParserAccumulator.m */; };
+		1A0568E7158DDC870027CB83 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0568D4158DDC870027CB83 /* SBJsonStreamParserAdapter.m */; };
+		1A0568E8158DDC870027CB83 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0568D6158DDC870027CB83 /* SBJsonStreamParserState.m */; };
+		1A0568E9158DDC870027CB83 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0568D8158DDC870027CB83 /* SBJsonStreamWriter.m */; };
+		1A0568EA158DDC870027CB83 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0568DA158DDC870027CB83 /* SBJsonStreamWriterAccumulator.m */; };
+		1A0568EB158DDC870027CB83 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0568DC158DDC870027CB83 /* SBJsonStreamWriterState.m */; };
+		1A0568EC158DDC870027CB83 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0568DE158DDC870027CB83 /* SBJsonTokeniser.m */; };
+		1A0568ED158DDC870027CB83 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0568E0158DDC870027CB83 /* SBJsonUTF8Stream.m */; };
+		1A0568EE158DDC870027CB83 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0568E2158DDC870027CB83 /* SBJsonWriter.m */; };
+		1A10033D15867D4D00B30507 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A10033C15867D4D00B30507 /* MapKit.framework */; };
+		1A14584D15987CB800808E90 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1A14584C15987CB800808E90 /* TapkuLibrary.bundle */; };
+		1A190FEF15987FF0006F0B10 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A190FEA15987FE0006F0B10 /* libTapkuLibrary.a */; };
+		1A190FF715988094006F0B10 /* GCALAsyncLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A190FF215988094006F0B10 /* GCALAsyncLoader.m */; };
+		1A190FF815988094006F0B10 /* GCALResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A190FF415988094006F0B10 /* GCALResponse.m */; };
+		1A190FF915988094006F0B10 /* GCALScriptEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A190FF615988094006F0B10 /* GCALScriptEngine.m */; };
+		1A1B96F8158A6ED300481542 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B96F6158A6ED300481542 /* EventDetailViewController.m */; };
+		1A1B96F9158A6ED300481542 /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A1B96F7158A6ED300481542 /* EventDetailViewController.xib */; };
+		1A1B96FC158AA25E00481542 /* EventDetailTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B96FB158AA25E00481542 /* EventDetailTitleCell.m */; };
+		1A1B96FE158AA30F00481542 /* EventDetailTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A1B96FD158AA30F00481542 /* EventDetailTitleCell.xib */; };
+		1A1B9701158AA97100481542 /* EventDetailPlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B9700158AA97000481542 /* EventDetailPlaceCell.m */; };
+		1A1B9703158AAE2B00481542 /* EventDetailPlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A1B9702158AAE2B00481542 /* EventDetailPlaceCell.xib */; };
+		1A1B9706158AAFB100481542 /* EventDetailDescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B9705158AAFB100481542 /* EventDetailDescriptionCell.m */; };
+		1A1B9708158AB04500481542 /* EventDetailDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A1B9707158AB04500481542 /* EventDetailDescriptionCell.xib */; };
+		1A2072C5159B1D4F003E618C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2072C4159B1D4F003E618C /* Icon.png */; };
+		1A2072C7159B1D65003E618C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2072C6159B1D65003E618C /* Icon@2x.png */; };
+		1A2D93091588BBA10004EE95 /* EventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2D93081588BBA10004EE95 /* EventCell.m */; };
+		1A2D930B1588BBAF0004EE95 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A2D930A1588BBAF0004EE95 /* EventCell.xib */; };
+		1A50CF34158B42E500D0E76E /* ListCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A50CF32158B42E500D0E76E /* ListCalendarViewController.m */; };
+		1A50CF35158B42E500D0E76E /* ListCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A50CF33158B42E500D0E76E /* ListCalendarViewController.xib */; };
+		1A50CF3D158B558400D0E76E /* MonthEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A50CF3C158B558400D0E76E /* MonthEvent.m */; };
+		1A57BD5C1597C7BC00C0ADA0 /* NSDate+ITCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1AB8F1597C1AC005AFC1F /* NSDate+ITCalendar.m */; };
+		1AA1DD0E15A5871200FE63AD /* LoadingOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1DD0D15A5871200FE63AD /* LoadingOperation.m */; };
+		1AA1DD1115A5EF9D00FE63AD /* OperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1DD1015A5EF9D00FE63AD /* OperationManager.m */; };
+		1AAB1AA2158CE1D500BB2EBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB1AA1158CE1D400BB2EBF /* AppDelegate.m */; };
+		1AAB1AA6158CE43D00BB2EBF /* ContainerCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB1AA4158CE43B00BB2EBF /* ContainerCalendarViewController.m */; };
+		1AAB1ABF158CFC8400BB2EBF /* ContainerCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB1ABE158CFC8400BB2EBF /* ContainerCalendarViewController.xib */; };
+		1AAB1B01158D5FB500BB2EBF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAB1B00158D5FB500BB2EBF /* CFNetwork.framework */; };
+		1AAB1B03158D5FBE00BB2EBF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAB1B02158D5FBE00BB2EBF /* MobileCoreServices.framework */; };
+		1AAB1B05158D5FCB00BB2EBF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAB1B04158D5FCB00BB2EBF /* libz.dylib */; };
+		1AAB1B0A158D603700BB2EBF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAB1B09158D603700BB2EBF /* SystemConfiguration.framework */; };
+		1AC3062E1591DDFF0081E84F /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3062D1591DDFF0081E84F /* index.html */; };
+		1AD40C691588694E0097AC97 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD40C681588694E0097AC97 /* Event.m */; };
+		1AD40C7615886B610097AC97 /* EventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD40C7515886B610097AC97 /* EventManager.m */; };
+		1AD40C7915887AC70097AC97 /* DayEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD40C7815887AC70097AC97 /* DayEvent.m */; };
+		1AD40C7F15887F6D0097AC97 /* MonthCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD40C7E15887F5D0097AC97 /* MonthCalendarViewController.m */; };
+		1AD40C87158887130097AC97 /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD40C86158887130097AC97 /* NSDate+Formatter.m */; };
+		1AF1AB171597908E005AFC1F /* IndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1AB161597908E005AFC1F /* IndicatorView.m */; };
+		1AF1AB241597A2ED005AFC1F /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF1AB221597A2ED005AFC1F /* EventKit.framework */; };
+		1AF1AB251597A2ED005AFC1F /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF1AB231597A2ED005AFC1F /* EventKitUI.framework */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		3B30B21F129EE95B00466666 /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B30B21D129EE95B00466666 /* Back.png */; };
+		3B30B220129EE95B00466666 /* Back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B30B21E129EE95B00466666 /* Back@2x.png */; };
+		3BF88B1F11E544FF00C9FC43 /* launch_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF88B1B11E544FF00C9FC43 /* launch_iphone.png */; };
+		3BF88C1B11E547BE00C9FC43 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF88BEB11E547A000C9FC43 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1A190FE915987FE0006F0B10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B111E4614593F8800C72A38 /* TapkuLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = TapkuLibrary;
+		};
+		1A190FEB15987FE0006F0B10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B111E4614593F8800C72A38 /* TapkuLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B45DDF1134C736600D24C1A;
+			remoteInfo = LogicTests;
+		};
+		1A190FED15987FEB006F0B10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B111E4614593F8800C72A38 /* TapkuLibrary.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = TapkuLibrary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A031655159260020000A8EE /* NSDate+locale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+locale.h"; sourceTree = "<group>"; };
+		1A031656159260020000A8EE /* NSDate+locale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+locale.m"; sourceTree = "<group>"; };
+		1A0568C3158DD8C80027CB83 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		1A0568CA158DDC870027CB83 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
+		1A0568CB158DDC870027CB83 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
+		1A0568CC158DDC870027CB83 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
+		1A0568CD158DDC870027CB83 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		1A0568CE158DDC870027CB83 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		1A0568CF158DDC870027CB83 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
+		1A0568D0158DDC870027CB83 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParser.m; sourceTree = "<group>"; };
+		1A0568D1158DDC870027CB83 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		1A0568D2158DDC870027CB83 /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
+		1A0568D3158DDC870027CB83 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		1A0568D4158DDC870027CB83 /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
+		1A0568D5158DDC870027CB83 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		1A0568D6158DDC870027CB83 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		1A0568D7158DDC870027CB83 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		1A0568D8158DDC870027CB83 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		1A0568D9158DDC870027CB83 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		1A0568DA158DDC870027CB83 /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		1A0568DB158DDC870027CB83 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		1A0568DC158DDC870027CB83 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		1A0568DD158DDC870027CB83 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
+		1A0568DE158DDC870027CB83 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
+		1A0568DF158DDC870027CB83 /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonUTF8Stream.h; sourceTree = "<group>"; };
+		1A0568E0158DDC870027CB83 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
+		1A0568E1158DDC870027CB83 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		1A0568E2158DDC870027CB83 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		1A10033C15867D4D00B30507 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1A14584C15987CB800808E90 /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = ../lib/TapkuLibrary.bundle; sourceTree = "<group>"; };
+		1A190FF115988094006F0B10 /* GCALAsyncLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCALAsyncLoader.h; sourceTree = "<group>"; };
+		1A190FF215988094006F0B10 /* GCALAsyncLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCALAsyncLoader.m; sourceTree = "<group>"; };
+		1A190FF315988094006F0B10 /* GCALResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCALResponse.h; sourceTree = "<group>"; };
+		1A190FF415988094006F0B10 /* GCALResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCALResponse.m; sourceTree = "<group>"; };
+		1A190FF515988094006F0B10 /* GCALScriptEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCALScriptEngine.h; sourceTree = "<group>"; };
+		1A190FF615988094006F0B10 /* GCALScriptEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCALScriptEngine.m; sourceTree = "<group>"; };
+		1A1B96F5158A6ED300481542 /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
+		1A1B96F6158A6ED300481542 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
+		1A1B96F7158A6ED300481542 /* EventDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
+		1A1B96FA158AA25E00481542 /* EventDetailTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailTitleCell.h; sourceTree = "<group>"; };
+		1A1B96FB158AA25E00481542 /* EventDetailTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailTitleCell.m; sourceTree = "<group>"; };
+		1A1B96FD158AA30F00481542 /* EventDetailTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailTitleCell.xib; sourceTree = "<group>"; };
+		1A1B96FF158AA97000481542 /* EventDetailPlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailPlaceCell.h; sourceTree = "<group>"; };
+		1A1B9700158AA97000481542 /* EventDetailPlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailPlaceCell.m; sourceTree = "<group>"; };
+		1A1B9702158AAE2B00481542 /* EventDetailPlaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailPlaceCell.xib; sourceTree = "<group>"; };
+		1A1B9704158AAFB100481542 /* EventDetailDescriptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailDescriptionCell.h; sourceTree = "<group>"; };
+		1A1B9705158AAFB100481542 /* EventDetailDescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailDescriptionCell.m; sourceTree = "<group>"; };
+		1A1B9707158AB04500481542 /* EventDetailDescriptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailDescriptionCell.xib; sourceTree = "<group>"; };
+		1A2072C4159B1D4F003E618C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		1A2072C6159B1D65003E618C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		1A2D93071588BBA10004EE95 /* EventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCell.h; sourceTree = "<group>"; };
+		1A2D93081588BBA10004EE95 /* EventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCell.m; sourceTree = "<group>"; };
+		1A2D930A1588BBAF0004EE95 /* EventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
+		1A50CF31158B42E500D0E76E /* ListCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCalendarViewController.h; sourceTree = "<group>"; };
+		1A50CF32158B42E500D0E76E /* ListCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCalendarViewController.m; sourceTree = "<group>"; };
+		1A50CF33158B42E500D0E76E /* ListCalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCalendarViewController.xib; sourceTree = "<group>"; };
+		1A50CF3B158B558400D0E76E /* MonthEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthEvent.h; sourceTree = "<group>"; };
+		1A50CF3C158B558400D0E76E /* MonthEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthEvent.m; sourceTree = "<group>"; };
+		1AA1DD0215A54AA300FE63AD /* ContainerCalendarOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContainerCalendarOperation.h; sourceTree = "<group>"; };
+		1AA1DD0C15A5871200FE63AD /* LoadingOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingOperation.h; sourceTree = "<group>"; };
+		1AA1DD0D15A5871200FE63AD /* LoadingOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingOperation.m; sourceTree = "<group>"; };
+		1AA1DD0F15A5EF9D00FE63AD /* OperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationManager.h; sourceTree = "<group>"; };
+		1AA1DD1015A5EF9D00FE63AD /* OperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationManager.m; sourceTree = "<group>"; };
+		1AAB1AA0158CE1CE00BB2EBF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		1AAB1AA1158CE1D400BB2EBF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		1AAB1AA3158CE43B00BB2EBF /* ContainerCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerCalendarViewController.h; sourceTree = "<group>"; };
+		1AAB1AA4158CE43B00BB2EBF /* ContainerCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerCalendarViewController.m; sourceTree = "<group>"; };
+		1AAB1ABE158CFC8400BB2EBF /* ContainerCalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContainerCalendarViewController.xib; sourceTree = "<group>"; };
+		1AAB1B00158D5FB500BB2EBF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		1AAB1B02158D5FBE00BB2EBF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		1AAB1B04158D5FCB00BB2EBF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		1AAB1B09158D603700BB2EBF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1AC3062D1591DDFF0081E84F /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		1AD40C671588694E0097AC97 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		1AD40C681588694E0097AC97 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		1AD40C7415886B610097AC97 /* EventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventManager.h; sourceTree = "<group>"; };
+		1AD40C7515886B610097AC97 /* EventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventManager.m; sourceTree = "<group>"; };
+		1AD40C7715887AC70097AC97 /* DayEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayEvent.h; sourceTree = "<group>"; };
+		1AD40C7815887AC70097AC97 /* DayEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayEvent.m; sourceTree = "<group>"; };
+		1AD40C7D15887F5D0097AC97 /* MonthCalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonthCalendarViewController.h; sourceTree = "<group>"; };
+		1AD40C7E15887F5D0097AC97 /* MonthCalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonthCalendarViewController.m; sourceTree = "<group>"; };
+		1AD40C85158887130097AC97 /* NSDate+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatter.h"; sourceTree = "<group>"; };
+		1AD40C86158887130097AC97 /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatter.m"; sourceTree = "<group>"; };
+		1AF1AB151597908E005AFC1F /* IndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndicatorView.h; sourceTree = "<group>"; };
+		1AF1AB161597908E005AFC1F /* IndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndicatorView.m; sourceTree = "<group>"; };
+		1AF1AB221597A2ED005AFC1F /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		1AF1AB231597A2ED005AFC1F /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		1AF1AB8E1597C1AC005AFC1F /* NSDate+ITCalendar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+ITCalendar.h"; sourceTree = "<group>"; };
+		1AF1AB8F1597C1AC005AFC1F /* NSDate+ITCalendar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ITCalendar.m"; sourceTree = "<group>"; };
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* itcalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itcalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Shared/main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* ITCalendar_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITCalendar_Prefix.pch; sourceTree = "<group>"; };
+		3B111E4614593F8800C72A38 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = ../lib/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
+		3B30B21D129EE95B00466666 /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back.png; sourceTree = "<group>"; };
+		3B30B21E129EE95B00466666 /* Back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back@2x.png"; sourceTree = "<group>"; };
+		3BF88B1B11E544FF00C9FC43 /* launch_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch_iphone.png; sourceTree = "<group>"; };
+		3BF88BEB11E547A000C9FC43 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8D1107310486CEB800E47090 /* ITCalendar-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ITCalendar-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A190FEF15987FF0006F0B10 /* libTapkuLibrary.a in Frameworks */,
+				1AF1AB241597A2ED005AFC1F /* EventKit.framework in Frameworks */,
+				1AF1AB251597A2ED005AFC1F /* EventKitUI.framework in Frameworks */,
+				1A0568C4158DD8C80027CB83 /* libxml2.dylib in Frameworks */,
+				1AAB1B0A158D603700BB2EBF /* SystemConfiguration.framework in Frameworks */,
+				1AAB1B05158D5FCB00BB2EBF /* libz.dylib in Frameworks */,
+				1AAB1B03158D5FBE00BB2EBF /* MobileCoreServices.framework in Frameworks */,
+				1AAB1B01158D5FB500BB2EBF /* CFNetwork.framework in Frameworks */,
+				1A10033D15867D4D00B30507 /* MapKit.framework in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				3BF88C1B11E547BE00C9FC43 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* itcalendar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A0568C9158DDC870027CB83 /* SBJSON */ = {
+			isa = PBXGroup;
+			children = (
+				1A0568CA158DDC870027CB83 /* NSObject+SBJson.h */,
+				1A0568CB158DDC870027CB83 /* NSObject+SBJson.m */,
+				1A0568CC158DDC870027CB83 /* SBJson.h */,
+				1A0568CD158DDC870027CB83 /* SBJsonParser.h */,
+				1A0568CE158DDC870027CB83 /* SBJsonParser.m */,
+				1A0568CF158DDC870027CB83 /* SBJsonStreamParser.h */,
+				1A0568D0158DDC870027CB83 /* SBJsonStreamParser.m */,
+				1A0568D1158DDC870027CB83 /* SBJsonStreamParserAccumulator.h */,
+				1A0568D2158DDC870027CB83 /* SBJsonStreamParserAccumulator.m */,
+				1A0568D3158DDC870027CB83 /* SBJsonStreamParserAdapter.h */,
+				1A0568D4158DDC870027CB83 /* SBJsonStreamParserAdapter.m */,
+				1A0568D5158DDC870027CB83 /* SBJsonStreamParserState.h */,
+				1A0568D6158DDC870027CB83 /* SBJsonStreamParserState.m */,
+				1A0568D7158DDC870027CB83 /* SBJsonStreamWriter.h */,
+				1A0568D8158DDC870027CB83 /* SBJsonStreamWriter.m */,
+				1A0568D9158DDC870027CB83 /* SBJsonStreamWriterAccumulator.h */,
+				1A0568DA158DDC870027CB83 /* SBJsonStreamWriterAccumulator.m */,
+				1A0568DB158DDC870027CB83 /* SBJsonStreamWriterState.h */,
+				1A0568DC158DDC870027CB83 /* SBJsonStreamWriterState.m */,
+				1A0568DD158DDC870027CB83 /* SBJsonTokeniser.h */,
+				1A0568DE158DDC870027CB83 /* SBJsonTokeniser.m */,
+				1A0568DF158DDC870027CB83 /* SBJsonUTF8Stream.h */,
+				1A0568E0158DDC870027CB83 /* SBJsonUTF8Stream.m */,
+				1A0568E1158DDC870027CB83 /* SBJsonWriter.h */,
+				1A0568E2158DDC870027CB83 /* SBJsonWriter.m */,
+			);
+			path = SBJSON;
+			sourceTree = "<group>";
+		};
+		1A190FE515987FE0006F0B10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A190FEA15987FE0006F0B10 /* libTapkuLibrary.a */,
+				1A190FEC15987FE0006F0B10 /* LogicTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A190FF015988094006F0B10 /* GCAL */ = {
+			isa = PBXGroup;
+			children = (
+				1A190FF115988094006F0B10 /* GCALAsyncLoader.h */,
+				1A190FF215988094006F0B10 /* GCALAsyncLoader.m */,
+				1A190FF315988094006F0B10 /* GCALResponse.h */,
+				1A190FF415988094006F0B10 /* GCALResponse.m */,
+				1A190FF515988094006F0B10 /* GCALScriptEngine.h */,
+				1A190FF615988094006F0B10 /* GCALScriptEngine.m */,
+			);
+			name = GCAL;
+			path = Classes/GCAL;
+			sourceTree = SOURCE_ROOT;
+		};
+		1AA1DD0015A541E100FE63AD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1A2D93071588BBA10004EE95 /* EventCell.h */,
+				1A2D93081588BBA10004EE95 /* EventCell.m */,
+				1A2D930A1588BBAF0004EE95 /* EventCell.xib */,
+				1A1B96FA158AA25E00481542 /* EventDetailTitleCell.h */,
+				1A1B96FB158AA25E00481542 /* EventDetailTitleCell.m */,
+				1A1B96FD158AA30F00481542 /* EventDetailTitleCell.xib */,
+				1A1B96FF158AA97000481542 /* EventDetailPlaceCell.h */,
+				1A1B9700158AA97000481542 /* EventDetailPlaceCell.m */,
+				1A1B9702158AAE2B00481542 /* EventDetailPlaceCell.xib */,
+				1A1B9704158AAFB100481542 /* EventDetailDescriptionCell.h */,
+				1A1B9705158AAFB100481542 /* EventDetailDescriptionCell.m */,
+				1A1B9707158AB04500481542 /* EventDetailDescriptionCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		1AA1DD0115A54A7200FE63AD /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				1AA1DD0215A54AA300FE63AD /* ContainerCalendarOperation.h */,
+				1AA1DD0C15A5871200FE63AD /* LoadingOperation.h */,
+				1AA1DD0D15A5871200FE63AD /* LoadingOperation.m */,
+				1AA1DD0F15A5EF9D00FE63AD /* OperationManager.h */,
+				1AA1DD1015A5EF9D00FE63AD /* OperationManager.m */,
+			);
+			name = Operation;
+			path = ../Operation;
+			sourceTree = "<group>";
+		};
+		1AD40C63158868B50097AC97 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1AA1DD0115A54A7200FE63AD /* Operation */,
+				1AD40C671588694E0097AC97 /* Event.h */,
+				1AD40C681588694E0097AC97 /* Event.m */,
+				1AD40C7715887AC70097AC97 /* DayEvent.h */,
+				1AD40C7815887AC70097AC97 /* DayEvent.m */,
+				1A50CF3B158B558400D0E76E /* MonthEvent.h */,
+				1A50CF3C158B558400D0E76E /* MonthEvent.m */,
+				1AD40C7415886B610097AC97 /* EventManager.h */,
+				1AD40C7515886B610097AC97 /* EventManager.m */,
+			);
+			name = Model;
+			path = ../Classes/Model;
+			sourceTree = "<group>";
+		};
+		1AD40C84158887130097AC97 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				1AD40C85158887130097AC97 /* NSDate+Formatter.h */,
+				1AD40C86158887130097AC97 /* NSDate+Formatter.m */,
+				1AF1AB8E1597C1AC005AFC1F /* NSDate+ITCalendar.h */,
+				1AF1AB8F1597C1AC005AFC1F /* NSDate+ITCalendar.m */,
+				1A031655159260020000A8EE /* NSDate+locale.h */,
+				1A031656159260020000A8EE /* NSDate+locale.m */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
+		1AF1AB1415979083005AFC1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1AF1AB151597908E005AFC1F /* IndicatorView.h */,
+				1AF1AB161597908E005AFC1F /* IndicatorView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2860E324111B887F00E27156 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1A190FF015988094006F0B10 /* GCAL */,
+				1AD40C84158887130097AC97 /* Extention */,
+				1AD40C63158868B50097AC97 /* Model */,
+				3BF88B7511E5468D00C9FC43 /* ViewControllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		28EEBF621118D79A00187D67 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1A14584C15987CB800808E90 /* TapkuLibrary.bundle */,
+				3BF88B1711E544FF00C9FC43 /* Images */,
+				8D1107310486CEB800E47090 /* ITCalendar-Info.plist */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				1A0568C9158DDC870027CB83 /* SBJSON */,
+				2860E324111B887F00E27156 /* Classes */,
+				1AAB1AA0158CE1CE00BB2EBF /* AppDelegate.h */,
+				1AAB1AA1158CE1D400BB2EBF /* AppDelegate.m */,
+				28EEBF621118D79A00187D67 /* Shared */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1AC3062D1591DDFF0081E84F /* index.html */,
+				32CA4F630368D1EE00C91783 /* ITCalendar_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AF1AB221597A2ED005AFC1F /* EventKit.framework */,
+				1AF1AB231597A2ED005AFC1F /* EventKitUI.framework */,
+				1A0568C3158DD8C80027CB83 /* libxml2.dylib */,
+				1AAB1B09158D603700BB2EBF /* SystemConfiguration.framework */,
+				3B111E4614593F8800C72A38 /* TapkuLibrary.xcodeproj */,
+				1AAB1B04158D5FCB00BB2EBF /* libz.dylib */,
+				1AAB1B02158D5FBE00BB2EBF /* MobileCoreServices.framework */,
+				1AAB1B00158D5FB500BB2EBF /* CFNetwork.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				1A10033C15867D4D00B30507 /* MapKit.framework */,
+				3BF88BEB11E547A000C9FC43 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BF88B1711E544FF00C9FC43 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3B30B21D129EE95B00466666 /* Back.png */,
+				3B30B21E129EE95B00466666 /* Back@2x.png */,
+				3BF88B1B11E544FF00C9FC43 /* launch_iphone.png */,
+				3BF88CB311E54B4E00C9FC43 /* Icon */,
+			);
+			name = Images;
+			path = Shared/Images;
+			sourceTree = "<group>";
+		};
+		3BF88B7511E5468D00C9FC43 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1AA1DD0015A541E100FE63AD /* Cell */,
+				1AF1AB1415979083005AFC1F /* View */,
+				1AAB1AA3158CE43B00BB2EBF /* ContainerCalendarViewController.h */,
+				1AAB1AA4158CE43B00BB2EBF /* ContainerCalendarViewController.m */,
+				1AAB1ABE158CFC8400BB2EBF /* ContainerCalendarViewController.xib */,
+				1AD40C7D15887F5D0097AC97 /* MonthCalendarViewController.h */,
+				1AD40C7E15887F5D0097AC97 /* MonthCalendarViewController.m */,
+				1A50CF31158B42E500D0E76E /* ListCalendarViewController.h */,
+				1A50CF32158B42E500D0E76E /* ListCalendarViewController.m */,
+				1A50CF33158B42E500D0E76E /* ListCalendarViewController.xib */,
+				1A1B96F5158A6ED300481542 /* EventDetailViewController.h */,
+				1A1B96F6158A6ED300481542 /* EventDetailViewController.m */,
+				1A1B96F7158A6ED300481542 /* EventDetailViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3BF88CB311E54B4E00C9FC43 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				1A2072C6159B1D65003E618C /* Icon@2x.png */,
+				1A2072C4159B1D4F003E618C /* Icon.png */,
+			);
+			name = Icon;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* ITCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "ITCalendar" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A190FEE15987FEB006F0B10 /* PBXTargetDependency */,
+			);
+			name = ITCalendar;
+			productName = unviersaldemo;
+			productReference = 1D6058910D05DD3D006BFB54 /* itcalendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ITCalendar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1A190FE515987FE0006F0B10 /* Products */;
+					ProjectRef = 3B111E4614593F8800C72A38 /* TapkuLibrary.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* ITCalendar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1A190FEA15987FE0006F0B10 /* libTapkuLibrary.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTapkuLibrary.a;
+			remoteRef = 1A190FE915987FE0006F0B10 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1A190FEC15987FE0006F0B10 /* LogicTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LogicTests.octest;
+			remoteRef = 1A190FEB15987FE0006F0B10 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BF88B1F11E544FF00C9FC43 /* launch_iphone.png in Resources */,
+				3B30B21F129EE95B00466666 /* Back.png in Resources */,
+				3B30B220129EE95B00466666 /* Back@2x.png in Resources */,
+				1A2D930B1588BBAF0004EE95 /* EventCell.xib in Resources */,
+				1A1B96F9158A6ED300481542 /* EventDetailViewController.xib in Resources */,
+				1A1B96FE158AA30F00481542 /* EventDetailTitleCell.xib in Resources */,
+				1A1B9703158AAE2B00481542 /* EventDetailPlaceCell.xib in Resources */,
+				1A1B9708158AB04500481542 /* EventDetailDescriptionCell.xib in Resources */,
+				1A50CF35158B42E500D0E76E /* ListCalendarViewController.xib in Resources */,
+				1AAB1ABF158CFC8400BB2EBF /* ContainerCalendarViewController.xib in Resources */,
+				1AC3062E1591DDFF0081E84F /* index.html in Resources */,
+				1A14584D15987CB800808E90 /* TapkuLibrary.bundle in Resources */,
+				1A2072C5159B1D4F003E618C /* Icon.png in Resources */,
+				1A2072C7159B1D65003E618C /* Icon@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1AD40C691588694E0097AC97 /* Event.m in Sources */,
+				1AD40C7615886B610097AC97 /* EventManager.m in Sources */,
+				1AD40C7915887AC70097AC97 /* DayEvent.m in Sources */,
+				1AD40C7F15887F6D0097AC97 /* MonthCalendarViewController.m in Sources */,
+				1AD40C87158887130097AC97 /* NSDate+Formatter.m in Sources */,
+				1A2D93091588BBA10004EE95 /* EventCell.m in Sources */,
+				1A1B96F8158A6ED300481542 /* EventDetailViewController.m in Sources */,
+				1A1B96FC158AA25E00481542 /* EventDetailTitleCell.m in Sources */,
+				1A1B9701158AA97100481542 /* EventDetailPlaceCell.m in Sources */,
+				1A1B9706158AAFB100481542 /* EventDetailDescriptionCell.m in Sources */,
+				1A50CF34158B42E500D0E76E /* ListCalendarViewController.m in Sources */,
+				1A50CF3D158B558400D0E76E /* MonthEvent.m in Sources */,
+				1AAB1AA2158CE1D500BB2EBF /* AppDelegate.m in Sources */,
+				1AAB1AA6158CE43D00BB2EBF /* ContainerCalendarViewController.m in Sources */,
+				1A0568E3158DDC870027CB83 /* NSObject+SBJson.m in Sources */,
+				1A0568E4158DDC870027CB83 /* SBJsonParser.m in Sources */,
+				1A0568E5158DDC870027CB83 /* SBJsonStreamParser.m in Sources */,
+				1A0568E6158DDC870027CB83 /* SBJsonStreamParserAccumulator.m in Sources */,
+				1A0568E7158DDC870027CB83 /* SBJsonStreamParserAdapter.m in Sources */,
+				1A0568E8158DDC870027CB83 /* SBJsonStreamParserState.m in Sources */,
+				1A0568E9158DDC870027CB83 /* SBJsonStreamWriter.m in Sources */,
+				1A0568EA158DDC870027CB83 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				1A0568EB158DDC870027CB83 /* SBJsonStreamWriterState.m in Sources */,
+				1A0568EC158DDC870027CB83 /* SBJsonTokeniser.m in Sources */,
+				1A0568ED158DDC870027CB83 /* SBJsonUTF8Stream.m in Sources */,
+				1A0568EE158DDC870027CB83 /* SBJsonWriter.m in Sources */,
+				1A031657159260020000A8EE /* NSDate+locale.m in Sources */,
+				1AF1AB171597908E005AFC1F /* IndicatorView.m in Sources */,
+				1A57BD5C1597C7BC00C0ADA0 /* NSDate+ITCalendar.m in Sources */,
+				1A190FF715988094006F0B10 /* GCALAsyncLoader.m in Sources */,
+				1A190FF815988094006F0B10 /* GCALResponse.m in Sources */,
+				1A190FF915988094006F0B10 /* GCALScriptEngine.m in Sources */,
+				1AA1DD0E15A5871200FE63AD /* LoadingOperation.m in Sources */,
+				1AA1DD1115A5EF9D00FE63AD /* OperationManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1A190FEE15987FEB006F0B10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TapkuLibrary;
+			targetProxy = 1A190FED15987FEB006F0B10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1AEBBCE0159CF633004DC10B /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kenji Furuno (22KD8HGN4V)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_SYMBOL_SEPARATION = YES;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = itcalendar;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C3B289A-8E2C-4DA4-A646-EA0653DA8F06";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Distribution;
+		};
+		1AEBBCE1159CF633004DC10B /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Kenji Furuno";
+				COPY_PHASE_STRIP = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ITCalendar_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					../lib/,
+					"${SDKROOT}/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = "ITCalendar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = itcalendar;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EC35A264-1E68-4643-ADBE-5DF653A70F9F";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kenji Furuno (22KD8HGN4V)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ITCalendar_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					../lib/,
+					"${SDKROOT}/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = "ITCalendar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = itcalendar;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C924DFA3-1E79-46E0-ABF1-085A9640873B";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kenji Furuno (22KD8HGN4V)";
+				COPY_PHASE_STRIP = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ITCalendar_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					../lib/,
+					"${SDKROOT}/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = "ITCalendar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = itcalendar;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C924DFA3-1E79-46E0-ABF1-085A9640873B";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kenji Furuno (22KD8HGN4V)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "DEBUG=1";
+				"GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS[arch=*]" = "";
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = itcalendar;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C3B289A-8E2C-4DA4-A646-EA0653DA8F06";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kenji Furuno (22KD8HGN4V)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_SYMBOL_SEPARATION = YES;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = itcalendar;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4C3B289A-8E2C-4DA4-A646-EA0653DA8F06";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "ITCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				1AEBBCE1159CF633004DC10B /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ITCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				1AEBBCE0159CF633004DC10B /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>notitle</title>
+</head>
+<script type="text/javascript" src="http://www.google.com/jsapi?"></script>
+<script type="text/javascript">
+<!--
+/* Loads the Google data JavaScript client library */
+google.load("gdata", "2.x");
+
+var CALENDAR_ADDRESS = 'fvijvohm91uifvd9hratehf65k%40group.calendar.google.com';
+var CALENDAR_URL = 'https://www.google.com/calendar/feeds/' + CALENDAR_ADDRESS + '/public/full';
+
+function init() {
+  // init the Google data JS client library with an error handler
+  google.gdata.client.init(handleGDError);
+}
+
+/**
+ * Adds a leading zero to a single-digit number.  Used for displaying dates.
+ */
+function padNumber(num) {
+  if (num <= 9) {
+    return "0" + num;
+  }
+  return num;
+}
+myTbl = new Array(7) ;
+myTbl[0] = "日" ;
+myTbl[1] = "月" ;
+myTbl[2] = "火" ;
+myTbl[3] = "水" ;
+myTbl[4] = "木" ;
+myTbl[5] = "金" ;
+myTbl[6] = "土" ;
+function weekString(day) {
+	return myTbl[day];
+};
+
+/**
+ * Uses Google data JS client library to retrieve a calendar feed from the specified
+ * URL.  The feed is controlled by several query parameters and a callback 
+ * function is called to process the feed results.
+ *
+ * @param {string} calendarUrl is the URL for a public calendar feed
+ */  
+function loadCalendar(startTime, endTime) {
+  var service = new 
+      google.gdata.calendar.CalendarService('gdata-js-client-samples-simple');
+  var query = new google.gdata.calendar.CalendarEventQuery(CALENDAR_URL);
+  
+  // 日本時間に設定
+  var s = startTime.split('-');
+  var e = endTime.split('-');
+  var gs = new google.gdata.DateTime(new Date(s[0], (s[1]-1), s[2]));
+  var ge = new google.gdata.DateTime(new Date(e[0], (e[1]-1), e[2]));
+
+    
+  query.setOrderBy('starttime');
+  query.setSortOrder('ascending');
+  //query.setFutureEvents(true);
+  query.setFutureEvents(false);
+  query.setSingleEvents(true);
+  query.setMaxResults(999);
+  query.setMinimumStartTime(gs);
+  query.setMaximumStartTime(ge);
+
+  service.getEventsFeed(query, listEvents, handleGDError);
+    
+  var isOnline = window.navigator.onLine;
+  var ret = ''+isOnline;
+  return ret;
+}
+
+/**
+ * Callback function for the Google data JS client library to call when an error
+ * occurs during the retrieval of the feed.  Details available depend partly
+ * on the web browser, but this shows a few basic examples. In the case of
+ * a privileged environment using ClientLogin authentication, there may also
+ * be an e.type attribute in some cases.
+ *
+ * @param {Error} e is an instance of an Error 
+ */
+function handleGDError(e) {
+//  document.getElementById('jsSourceFinal').setAttribute('style', 
+//      'display:none');
+//  if (e instanceof Error) {
+//    /* alert with the error line number, file and message */
+//    alert('Error at line ' + e.lineNumber +
+//          ' in ' + e.fileName + '\n' +
+//          'Message: ' + e.message);
+//    /* if available, output HTTP error code and status text */
+//    if (e.cause) {
+//      var status = e.cause.status;
+//      var statusText = e.cause.statusText;
+//      alert('Root cause: HTTP error ' + status + ' with status text of: ' + 
+//            statusText);
+//    }
+//  } else {
+//    alert(e.toString());
+//  }
+    var str = "error:" + e;
+    //window.location = encodeURI(str);
+    window.location = 'error';
+}
+
+function callback (jsonResult) {
+	var str = "callback:" + JSON.stringify({"result": jsonResult});
+	console.log(str);
+	console.log(encodeURI(str));
+    window.location = encodeURI(str);
+};
+
+
+/**
+ * Callback function for the Google data JS client library to call with a feed 
+ * of events retrieved.
+ *
+ * Creates an unordered list of events in a human-readable form.  This list of
+ * events is added into a div called 'events'.  The title for the calendar is
+ * placed in a div called 'calendarTitle'
+ *
+ * @param {json} feedRoot is the root of the feed, containing all entries 
+ */ 
+function listEvents(feedRoot) {
+  var entries = feedRoot.feed.getEntries();
+    
+  /* loop through each event in the feed */
+  var len = entries.length;
+  var jsonResult = [];
+  for (var i = 0; i < len; i++) {
+    var entry = entries[i];
+	// title
+    var title = entry.getTitle().getText();
+	
+	// 日時
+	var dateObjct = function () {
+		var times = entry.getTimes();
+		var startDateTime = null;
+		var startJSDate = null;
+		var endDateTime = null;
+		var endJSDate = null;
+		if (times.length > 0) {
+		  startDateTime = times[0].getStartTime();
+		  startJSDate = startDateTime.getDate();
+		  endDateTime = times[0].getEndTime();
+		  endJSDate = endDateTime.getDate();
+		}
+
+		// 開始時間
+		var startDateString = startJSDate.getFullYear() + "-" + padNumber((startJSDate.getMonth() + 1)) + "-" + padNumber(startJSDate.getDate());
+		var startTime = startJSDate.getHours() + ":" + padNumber(startJSDate.getMinutes());
+		var startWeek = weekString(startJSDate.getDay());
+		
+		var endDateString = endJSDate.getFullYear() + "-" + padNumber((endJSDate.getMonth() + 1)) + "-" + padNumber(endJSDate.getDate());
+		var endTime = endJSDate.getHours() + ":" + padNumber(endJSDate.getMinutes());
+		var endWeek = weekString(endJSDate.getDay());
+		
+		return {
+			"startDate": startDateString,
+			"startTime": startTime,
+			"startWeek": startWeek,
+			"endDate": endDateString,
+			"endTime": endTime,
+			"endWeek": endWeek
+		};
+
+	} ();
+	
+	// 詳細リンク
+    var entryLinkHref = null;
+    if (entry.getHtmlLink() != null) {
+      entryLinkHref = entry.getHtmlLink().getHref();
+    }
+	
+	// 場所
+	var locations = entry.getLocations();
+	var location = null;
+	if (locations.length > 0) {
+		location = locations[0].getValueString();
+	}
+	
+	// 説明
+	var content = entry.getContent().getText();
+	
+	/* create json result */
+	var result = {
+		"title": title,
+		"location": location,
+		"entryLink": entryLinkHref,
+		"content": content,
+		
+		"startDate": dateObjct.startDate,
+		"startTime": dateObjct.startTime,
+		"startWeek": dateObjct.startWeek,
+		"endDate": dateObjct.endDate,
+		"endTime": dateObjct.endTime,
+		"endWeek": dateObjct.endWeek
+	};
+
+	jsonResult.push(result);
+
+  }
+  callback(jsonResult);
+}
+
+google.setOnLoadCallback(init);
+
+//-->
+</script> 
+<body>
+<div id="calendarTitle"></div>
+<div id="events"></div>
+</body>
+</html>

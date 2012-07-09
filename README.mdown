@@ -1,0 +1,4 @@
+itCalendar
+============
+
+--TapkuLibraryを使用しています。詳細はlib/README.mdownを参照してください。
