@@ -13,6 +13,10 @@
 #import "EventManager.h"
 #import "OperationManager.h"
 
+
+#define kSearchBarRectOfList CGRectMake(0, 0, 78, 44)
+#define kSearchbarRectOfCalendar CGRectMake(0, 0, 100, 44)
+
 enum SegmentedControll {
     kSegmentedControllList = 0,
     kSegmentedControllCalendar = 1,
@@ -21,11 +25,14 @@ enum SegmentedControll {
 @interface ContainerCalendarViewController ()
 {
  @private
-    UISegmentedControl          *_segmentedControll;
-    
     UISearchBar                 *_searchBar;
     UIView                      *_searchBackgroundView;             // 検索バー表示中の背景ビュー
     NSString                    *_searchBarText;                    // 検索されたテキスト
+    CGRect                      _searchBarOriginRect;
+    
+    UIImageView                 *_titleView;
+    
+    UISegmentedControl          *_segmentedControll;
     
     IndicatorView               *_indicatorView;
 
@@ -43,6 +50,7 @@ enum SegmentedControll {
 - (void)addSubviewWithOffsetZero:(UIView *)view;
 - (void)addSearchBackgroundView;
 - (void)switchToController:(UIViewController *)newController;
+- (void)layoutSearchBar;
 
 // event
 - (void)segmentedValueDidChange:(id)sender;
@@ -71,11 +79,11 @@ enum SegmentedControll {
 #pragma mark ------------------------------------------
 #pragma mark ------ private method
 #pragma mark ------------------------------------------
+
 - (void)initNavigationBar
 {
     // 検索バーを作成する
-    _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 0)];
-    [_searchBar sizeToFit];
+    _searchBar = [[UISearchBar alloc] initWithFrame:kSearchbarRectOfCalendar];
     _searchBar.keyboardType = UIKeyboardTypeDefault;
     _searchBar.autocorrectionType = UITextAutocorrectionTypeNo;
     _searchBar.autocapitalizationType = UITextAutocapitalizationTypeNone;
@@ -89,11 +97,17 @@ enum SegmentedControll {
             searchTextField.enablesReturnKeyAutomatically = NO;
             break;
         }
-    }
-    
+    }    
     [_searchBar setDelegate:self];
-    
-    self.navigationItem.titleView = _searchBar;
+    // ナビゲーションバー右アイテムに設定
+    UIBarButtonItem *barButtonSearchBar = [[UIBarButtonItem alloc] initWithCustomView:_searchBar];
+    self.navigationItem.rightBarButtonItem = barButtonSearchBar;
+
+    // ヘッダービュー作成
+    UIImage *image = [UIImage imageNamed:@"headerView_logo.png"];
+    _titleView = [[UIImageView alloc] initWithImage:image];
+    self.navigationItem.titleView = _titleView;
+
 }
 
 - (void)initToolbar
@@ -118,11 +132,11 @@ enum SegmentedControll {
                               target:nil action:nil];
     
     // segment作成
-    UISegmentedControl *segment = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"リスト", @"月", nil]];
-    [segment setSelectedSegmentIndex:1];
-    [segment setSegmentedControlStyle:UISegmentedControlStyleBar];
-    [segment addTarget:self action:@selector(segmentedValueDidChange:) forControlEvents:UIControlEventValueChanged];
-    UIBarButtonItem *barButtonItemSegment = [[UIBarButtonItem alloc] initWithCustomView:segment];
+    _segmentedControll = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"リスト", @"月", nil]];
+    [_segmentedControll setSelectedSegmentIndex:1];
+    [_segmentedControll setSegmentedControlStyle:UISegmentedControlStyleBar];
+    [_segmentedControll addTarget:self action:@selector(segmentedValueDidChange:) forControlEvents:UIControlEventValueChanged];
+    UIBarButtonItem *barButtonItemSegment = [[UIBarButtonItem alloc] initWithCustomView:_segmentedControll];
     
     // インジケータビュー作成
     _indicatorView = [[IndicatorView alloc] init];
@@ -197,6 +211,18 @@ enum SegmentedControll {
     }
 }
 
+- (void)layoutSearchBar
+{
+    // 選択中のセグメントに合わせて、検索バーをレイアウトする
+    if (kSegmentedControllList == _segmentedControll.selectedSegmentIndex) {
+        // リストの場合
+        _searchBar.frame = kSearchBarRectOfList;
+        return;
+    }
+    // カレンダーの場合
+    _searchBar.frame = kSearchbarRectOfCalendar;
+}
+
 
 #pragma mark ------------------------------------------
 #pragma mark ------ event
@@ -205,17 +231,20 @@ enum SegmentedControll {
 - (void)segmentedValueDidChange:(id)sender
 {
     UISegmentedControl *segmentedControll = (UISegmentedControl*)sender;
-    
+
     // viewControllerの切り替え
+    // および、検索バーのサイズ調整
     
     // selected segmented is list
     if (kSegmentedControllList == [segmentedControll selectedSegmentIndex]) {
         
         [self switchToController:_listCalendar];
+        _searchBar.frame = kSearchBarRectOfList;
         return;
     }
     // selected segmented is calendar    
     [self switchToController:_monthCalendar];
+    _searchBar.frame = kSearchbarRectOfCalendar;
 }
 
 - (void)todayButtonDidClicked
@@ -244,8 +273,6 @@ enum SegmentedControll {
 // 選択月の監視
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    LOG_METHOD;
-    
     if ([keyPath isEqualToString:kCurrentMonthEvent]) {
         
         // メインスレッドから通知する
@@ -310,6 +337,7 @@ enum SegmentedControll {
     [self removeObserver:self forKeyPath:kCurrentMonthEvent];
 }
 
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -357,6 +385,24 @@ enum SegmentedControll {
 // サーチバー編集開始イベント
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
 {
+    // サーチバーのサイズを保持する
+    _searchBarOriginRect = self.navigationItem.titleView.frame;
+
+    [UIView animateWithDuration:0.2
+                          delay:0.0
+                        options:UIViewAnimationOptionAllowUserInteraction
+                     animations:^{
+                         // タイトルビューを非表示
+                         _titleView.alpha = 0;
+                         _titleView.frame = CGRectMake(-320,
+                                                       _searchBarOriginRect.origin.y,
+                                                       _searchBarOriginRect.size.width,
+                                                       _searchBarOriginRect.size.height);
+                         // 検索バーのサイズ調整
+                         [_searchBar setFrame:CGRectMake(5, 0, 310, 44)];
+                     }
+                     completion:NULL];
+    
     // 現在の入力内容を保持
     _searchBarText = searchBar.text;
     
@@ -372,6 +418,18 @@ enum SegmentedControll {
 // サーチバー編集終了イベント
 - (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar
 {
+    [UIView animateWithDuration:0.2
+                          delay:0.0
+                        options:UIViewAnimationOptionAllowUserInteraction
+                     animations:^{
+                         // タイトルビューを表示
+                         _titleView.alpha = 1.0;
+                         self.navigationItem.titleView.frame = _searchBarOriginRect;
+                         // 検索バーのサイズ調整
+                         [self layoutSearchBar];
+                     }
+                     completion:NULL];
+    
     return YES;
 }
 

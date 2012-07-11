@@ -126,11 +126,7 @@ enum NavigationBarButton {
 #pragma mark ------ private method
 #pragma mark ------------------------------------------
 - (void)initNavigationBar
-{
-    LOG_RECT(self.parentViewController.navigationItem.titleView.frame);
-    
-    // 検索バーのサイズ調整
-    self.parentViewController.navigationItem.titleView.frame = CGRectMake(105, 0, 218, 44);
+{    
     // ナビゲーションバーの左上に戻る進ボタンを作成する
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:107
                                                                                 target:self
@@ -144,8 +140,6 @@ enum NavigationBarButton {
 }
 - (void)clearNavigationBar
 {
-    // 検索バーのサイズ調整
-    self.parentViewController.navigationItem.titleView.frame = CGRectMake(5, 0, 310, 44);
     // ナビゲーションバーの左上に戻る進ボタンを作成する
     self.parentViewController.navigationItem.leftBarButtonItems = nil;
 }
