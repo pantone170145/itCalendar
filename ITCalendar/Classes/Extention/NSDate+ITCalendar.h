@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 // ITCalendar APP 独自のフォーマッタ
+// NSLocaleをja_JP指定として文字列をフォーマットします。
+// そのため、すでにja_JP指定のNSDateに使用すると、9時間のずれが生じます
 @interface NSDate (ITCalendar)
 
 // yyyy-MM-dd

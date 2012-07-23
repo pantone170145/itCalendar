@@ -171,7 +171,7 @@ enum NavigationBarButton {
 - (void)reload
 {
     // 今日
-    NSDate *today = [NSDate localeToday];
+    NSDate *today = [NSDate date];
     
     // 指定されている月のイベントを取得し、メンバにコピーする
     MonthEvent *monthEvent = [[EventManager sharedManager].currentMonthEvent copy];
@@ -247,9 +247,9 @@ enum NavigationBarButton {
 {
     // 今日のセクションが一番上にくるようにスクロールする
     
-    NSDate *today = [NSDate localeToday];
+    NSDate *today = [NSDate date];
     NSUInteger section = [_keys indexOfObject:[today ITFormatStringOfDate]];
-    
+        
     // 存在しない場合は何もしない
     if (NSNotFound == section) {
         return;
@@ -443,8 +443,7 @@ enum NavigationBarButton {
 {
     // 今日のセクションの場合のみ、文字色を青にする
     DayEvent *dayEvent = [self dayEventAtSection:section];
-    NSDate *today = [NSDate localeToday];
-
+    
     SectionHeaderView *headerView = [[SectionHeaderView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 22)];
     [headerView setBackgroundColor:RGBA(176, 186, 194, 0.9)];
     
@@ -456,7 +455,7 @@ enum NavigationBarButton {
     label.shadowOffset = CGSizeMake(0, 1);
     label.backgroundColor = [UIColor clearColor];
     
-    if ([today isSameDay:dayEvent.date]) {
+    if ([[NSDate date] isSameDay:dayEvent.date]) {
         // 今日のセクション
         label.textColor = RGBA(0, 116, 231, 1);
         label.shadowColor = [UIColor whiteColor];

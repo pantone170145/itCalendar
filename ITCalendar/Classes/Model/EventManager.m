@@ -65,60 +65,12 @@
     _searchWords = [NSArray array];
     
  
-//    [self loadTestData];
     return self;
 }
 
 - (void)dealloc
 {
     dispatch_release(_syncQueue);
-}
-
-// テストデータ読み込み
-- (void)loadTestData
-{
-    NSDate* today = [[NSDate date] nextDate];
-    
-    Event* event1 = [[Event alloc] init];
-    event1.title = @"[愛知]テストイベント1あああああああああああああああああああああああああいいいいい";
-//    event1.startTime = @"9:00";
-//    event1.dateAndTime = @"6/15(金), 9:00〜12:00";
-    event1.place = @"愛知県名古屋市名東区藤が丘244サンロイヤル富が丘";
-//    event1.placeUrl = @"http://www.yahoo.co.jp";
-    event1.descriptionUrl = @"http://www.google.co.jp";
-    event1.detailUrl = @"http://www.gmail.co.jp";
-    
-    Event* event2 = [[Event alloc] init];
-    event2.title = @"[愛知]テストイベント2";
-//    event2.startTime = @"11:00";
-//    event2.dateAndTime = @"6/15(金), 22:00〜24:00";
-    event2.place = @"愛知県名古屋市名東区藤が丘244サンロイヤル富が丘";
-//    event2.placeUrl = @"http://www.yahoo.co.jp";
-    event2.descriptionUrl = @"http://www.google.co.jp";
-    event2.detailUrl = @"http://www.gmail.co.jp";
-    
-    
-    // 一日のイベントとして登録
-    NSMutableArray *ma = [NSMutableArray array];
-    DayEvent* itEventsOfDay = [[DayEvent alloc] initWithDate:today];
-    [ma addObject:event1];
-    [ma addObject:event2];    
-    itEventsOfDay.events = ma;
-    
-    DayEvent* itEventsOfDay2 = [[DayEvent alloc] initWithDate:[today nextDate]];
-    NSMutableArray *ma2 = [NSMutableArray array];
-    [ma2 addObject:event2];
-    [ma2 addObject:event1];    
-    itEventsOfDay2.events = ma2;
-
-    
-    // 1ヶ月のイベント作成
-    MonthEvent* itEventsOfMonth = [[MonthEvent alloc] initWithMonthDate:[[NSDate date] monthDate]];
-    [itEventsOfMonth.dayEventsDict setValue:itEventsOfDay forKey:itEventsOfDay.dateString];
-    [itEventsOfMonth.dayEventsDict setValue:itEventsOfDay2 forKey:itEventsOfDay2.dateString];
-    
-    // 登録
-    [_monthEventDict setValue:itEventsOfMonth forKey:[itEventsOfMonth.monthDate ITFormatStringOfMonth]];
 }
 
 

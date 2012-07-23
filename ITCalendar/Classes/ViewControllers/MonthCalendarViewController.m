@@ -107,7 +107,7 @@
 	// Do any additional setup after loading the view.
     
     // デフォルトで今日を選択する
-    [self selectDate:[NSDate localeToday]];    
+    [self selectDate:[NSDate localeToday]];
 }
 
 - (void)viewDidUnload
